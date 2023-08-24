@@ -5,11 +5,10 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 
 import '../helpers/endpoints.dart';
-import '../model/class.dart';
 import '../model/second.dart';
 
-class Rep {
-  Future<GetApi> first() async {
+class Sec {
+  Future<GetApi> second() async {
     const path = ApiEndPoints.second;
     Uri uri = Uri.parse(path);
     try {
@@ -21,8 +20,8 @@ class Rep {
         headers: headers,
       );
 
-      // print("data");
-      // print('');
+      print("data");
+      print('');
       final data = json.decode(response.body);
       print(response.body);
       // print(data);

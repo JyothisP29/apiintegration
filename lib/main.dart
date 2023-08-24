@@ -1,3 +1,5 @@
+import 'package:firstapi/model/second.dart';
+import 'package:firstapi/screens/getApiScreen.dart';
 import 'package:firstapi/screens/home.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      home: const GetApiScreen(),
     );
   }
 }
