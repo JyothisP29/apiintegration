@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 import '../controller/controller.dart';
 import '../model/second.dart';
+import 'SecondRoute.dart';
 
 class GetApiScreen extends StatefulWidget {
   const GetApiScreen({super.key});
@@ -32,7 +33,14 @@ class _GetApiScreenState extends StateMVC<GetApiScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            const Text("data"),
+            InkWell(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SecondRoute()),
+                  );
+                },
+                child: const Text("data")),
             Expanded(
               child: ListView.builder(
                 itemCount: _con.getAct?.data?.length,
